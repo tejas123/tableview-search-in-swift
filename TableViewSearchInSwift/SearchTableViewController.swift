@@ -31,10 +31,9 @@ class SearchTableViewController: UITableViewController, UISearchDisplayDelegate,
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        var cellCountry = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+        var cellCountry = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         
         var countryName : String!
-        
         if tableView == self.searchDisplayController!.searchResultsTableView {
             countryName = marrFilteredCountryList[indexPath.row]
         } else {
@@ -53,14 +52,14 @@ class SearchTableViewController: UITableViewController, UISearchDisplayDelegate,
         })
     }
     
-    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
+    func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String!) -> Bool {
         self.filterTableViewForEnterText(searchString)
         return true
     }
     
-    func searchDisplayController(controller: UISearchDisplayController!,
+    func searchDisplayController(controller: UISearchDisplayController,
         shouldReloadTableForSearchScope searchOption: Int) -> Bool {
-            let textScope = self.searchDisplayController!.searchBar.scopeButtonTitles as [String]
+            let textScope = self.searchDisplayController!.searchBar.scopeButtonTitles as! [String]
             self.filterTableViewForEnterText(self.searchDisplayController!.searchBar.text)
             return true
     }
