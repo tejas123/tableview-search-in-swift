@@ -31,7 +31,7 @@ class SearchTableViewController: UITableViewController, UISearchDisplayDelegate,
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        var cellCountry = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        let cellCountry = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         
         var countryName : String!
         if tableView == self.searchDisplayController!.searchResultsTableView {
@@ -40,27 +40,26 @@ class SearchTableViewController: UITableViewController, UISearchDisplayDelegate,
             countryName = marrCountryList[indexPath.row]
         }
         
-        cellCountry.textLabel!.text = countryName
+        cellCountry.textLabel?.text = countryName
         
         return cellCountry
     }
     
     func filterTableViewForEnterText(searchText: String) {
         self.marrFilteredCountryList = self.marrCountryList.filter({( strCountry : String) -> Bool in
-            var stringForSearch = strCountry.rangeOfString(searchText)
+            let stringForSearch = strCountry.rangeOfString(searchText)
             return (stringForSearch != nil)
         })
     }
     
-    func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String!) -> Bool {
-        self.filterTableViewForEnterText(searchString)
+    func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String?) -> Bool {
+        self.filterTableViewForEnterText(searchString!)
         return true
     }
     
     func searchDisplayController(controller: UISearchDisplayController,
         shouldReloadTableForSearchScope searchOption: Int) -> Bool {
-            let textScope = self.searchDisplayController!.searchBar.scopeButtonTitles as! [String]
-            self.filterTableViewForEnterText(self.searchDisplayController!.searchBar.text)
+            self.filterTableViewForEnterText(self.searchDisplayController!.searchBar.text!)
             return true
     }
     
