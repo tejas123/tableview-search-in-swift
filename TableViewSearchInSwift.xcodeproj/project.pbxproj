@@ -12,7 +12,7 @@
 		4C1195EB1A85C614008CAAD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195EA1A85C614008CAAD7 /* Images.xcassets */; };
 		4C1195EE1A85C614008CAAD7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195EC1A85C614008CAAD7 /* LaunchScreen.xib */; };
 		4C1195FA1A85C614008CAAD7 /* TableViewSearchInSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1195F91A85C614008CAAD7 /* TableViewSearchInSwiftTests.swift */; };
-		4C1196041A85C778008CAAD7 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1196031A85C778008CAAD7 /* SearchTableViewController.swift */; };
+		4C21142D1C2BAE1600610AC2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C21142C1C2BAE1600610AC2 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,7 @@
 		4C1195F31A85C614008CAAD7 /* TableViewSearchInSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewSearchInSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1195F81A85C614008CAAD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C1195F91A85C614008CAAD7 /* TableViewSearchInSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSearchInSwiftTests.swift; sourceTree = "<group>"; };
-		4C1196031A85C778008CAAD7 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		4C21142C1C2BAE1600610AC2 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 			children = (
 				4C1195E31A85C614008CAAD7 /* AppDelegate.swift */,
 				4C1195E71A85C614008CAAD7 /* Main.storyboard */,
-				4C1196031A85C778008CAAD7 /* SearchTableViewController.swift */,
+				4C21142C1C2BAE1600610AC2 /* SearchViewController.swift */,
 				4C1195EA1A85C614008CAAD7 /* Images.xcassets */,
 				4C1195EC1A85C614008CAAD7 /* LaunchScreen.xib */,
 				4C1195E11A85C614008CAAD7 /* Supporting Files */,
@@ -214,8 +214,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C21142D1C2BAE1600610AC2 /* SearchViewController.swift in Sources */,
 				4C1195E41A85C614008CAAD7 /* AppDelegate.swift in Sources */,
-				4C1196041A85C778008CAAD7 /* SearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
